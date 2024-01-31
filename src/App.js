@@ -3,11 +3,12 @@ import { useState } from "react";
 import "./App.css";
 import ItemsContainer from "./components/ItemsContainer ";
 
-import AddCustomer from "./components/AddCustomer";
-import TiffinService from "./components/TiffinService";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import CustomerProfile from "./components/CutomerProfile";
+
 import CustomerData from "./components/CustomerData/CustomerData";
+import AddCustomer from "./components/AddCustomer/AddCustomer";
+import TiffinService from "./components/TiffinService/TiffinService";
+import CustomerProfile from "./components/CustomerData/CutomerProfile";
 
 function App() {
   const [Admin, setAdmin] = useState(false);
