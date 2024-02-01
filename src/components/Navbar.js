@@ -41,7 +41,10 @@ function Navbar({ setAdmin, Admin }) {
               />
             </p>
             <p>
-              <button onClick={() => setShowAdminLogin(true)}>
+              <button
+                className="text-lg font-bold"
+                onClick={() => setShowAdminLogin(true)}
+              >
                 Admin Login
               </button>
               <AdminLogin

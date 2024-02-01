@@ -11,11 +11,31 @@ const GenExcel = () => {
   return (
     <div>
       <form onSubmit={(e) => handleSubmit(e)}>
-        <div>
-          <input type="checkbox" />
-          <label> Dining</label>
-          <input type="checkbox" />
-          <label>Tiffin</label>
+        <div className="relative p-4">
+          <div className="flex items-center gap-2">
+            <input type="checkbox" class="accent-yellow-400 h-5 w-5" />
+            <label
+              className="bg-yellow-300 px-9 py-0 border border-black rounded-md  
+               font-semibold"
+            >
+              Dining
+            </label>
+            <input type="checkbox" class="accent-yellow-400 h-5 w-5" />
+            <label
+              className="bg-yellow-300 px-9 py-0 border border-black rounded-md  
+               font-semibold"
+            >
+              Tiffin
+            </label>
+          </div>
+          <div className=" absolute top-96 bottom-0">
+            <button
+              className=" absolute  bottom-0 bg-yellow-300 px-9 py-0 border border-black rounded-md  
+            font-semibold"
+            >
+              Generate
+            </button>
+          </div>
         </div>
 
         {showGenSuccess ? (
@@ -24,14 +44,14 @@ const GenExcel = () => {
 
         <div>{/* backend data  */}</div>
 
-        <div>
+        {/* <div>
           <button
-            className="bg-yellow-400 px-8 border border-black outline-8 
-                font-semibold"
+            className=" left-18 bottom-5 bg-yellow-300 px-9 py-0 border border-black rounded-md  
+            font-semibold"
           >
             Generate
           </button>
-        </div>
+        </div> */}
       </form>
     </div>
   );

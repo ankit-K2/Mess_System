@@ -22,86 +22,88 @@ function AddCustomer() {
         Add Customer
       </header>
 
-      <div className="w-[95vw] h-[70vh]  mx-auto  bg-white ">
-        <button className="">Add Customer</button>
+      <div className=" relative w-[95vw] h-[70vh]  mx-auto  bg-white">
+        <button className="bg-yellow-400 ml-2 mt-2 border border-black px-1 w-[20vh] h-[4vh]">
+          Add Customer
+        </button>
 
-        <div>
-          <button
-            className={`${diningStatus ? "bg-yellow-300" : null}`}
-            onClick={handleDinigChange}
-          >
-            Dining
-          </button>
-          <button
-            className={`${tiffinStatus ? "bg-yellow-300" : null}`}
-            onClick={handleTiffinChange}
-          >
-            Tiffin
-          </button>
-        </div>
-        <form>
-          <div className="flex gap-4">
-            <div>
-              <label>Name:</label>
-              <br />
-              <input className="bg-zinc-200 w-[40vw] border border-black outline-8" />
-              <br />
-
-              <label>Mobile Number:</label>
-              <br />
-              <input className="bg-zinc-200 w-[40vw] border border-black outline-8" />
-              <br />
-
-              <label>Permanent Address:</label>
-              <br />
-              <input className="bg-zinc-200 w-[40vw] border border-black outline-8" />
-              <br />
-
-              <label>Temporary Address:</label>
-              <br />
-              <input className="bg-zinc-200 w-[40vw] border border-black outline-8" />
-              <br />
-
-              <label>Aadhar Number:</label>
-              <br />
-              <input className="bg-zinc-200 w-[40vw] border border-black outline-8" />
-              <br />
-            </div>
-
-            <div>
-              <label>Plan:</label>
-              <br />
-              <input className="bg-zinc-200 w-[40vw] border border-black outline-8" />
-              <br />
-
-              {diningStatus ? (
-                <div>
-                  <label>FingerPrint/ Biometric Details:</label>
-                  <br />
-                  <div className="bg-zinc-200 w-[30vw] h-[25vh]"></div>
-                </div>
-              ) : null}
-            </div>
+        <div className="flex flex-col gap-1 m-5">
+          <div className="flex  gap-8">
+            <button
+              className={`${
+                diningStatus ? "bg-yellow-300 px-2 border border-black" : null
+              }`}
+              onClick={handleDinigChange}
+            >
+              Dining
+            </button>
+            <button
+              className={`${
+                tiffinStatus ? "bg-yellow-300 px-2 border border-black" : null
+              }`}
+              onClick={handleTiffinChange}
+            >
+              Tiffin
+            </button>
           </div>
+          <form>
+            <div className="flex gap-10">
+              <div className="w-full">
+                <label>Name:</label>
+                <br />
+                <input className="bg-zinc-200 w-[40vw] border border-black outline-8" />
+                <br />
 
-          <footer>
-            <div>
-              <button
-                className="bg-yellow-400 px-8 border border-black outline-8  
-          font-semibold"
-                onClick={() => setShowPayment(true)}
-              >
-                Continue
-              </button>
-              <button
-                className="bg-yellow-400 px-8 border border-black outline-8  
-          font-semibold"
-              >
-                Close
-              </button>
+                <label>Mobile Number:</label>
+                <br />
+                <input className="bg-zinc-200 w-[40vw] border border-black outline-8" />
+                <br />
+
+                <label>Permanent Address:</label>
+                <br />
+                <input className="bg-zinc-200 w-[40vw] border border-black outline-8" />
+                <br />
+
+                <label>Temporary Address:</label>
+                <br />
+                <input className="bg-zinc-200 w-[40vw] border border-black outline-8" />
+                <br />
+
+                <label>Aadhar Number:</label>
+                <br />
+                <input className="bg-zinc-200 w-[40vw] border border-black outline-8" />
+                <br />
+              </div>
+
+              <div className="w-full">
+                <label>Plan:</label>
+                <br />
+                <input className="bg-zinc-200 w-[40vw] border border-black outline-8" />
+                <br />
+
+                {diningStatus ? (
+                  <div>
+                    <label>FingerPrint/ Biometric Details:</label>
+                    <br />
+                    <div className="bg-zinc-200 w-[90%] h-[30vh]"></div>
+                  </div>
+                ) : null}
+              </div>
             </div>
-          </footer>
-        </form>
+          </form>
+        </div>
+
+        <footer className="absolute right-5 bottom-3 flex gap-28">
+          <button
+            className="bg-yellow-400 px-8 py-1 border border-black outline-none rounded-sm"
+            onClick={() => setShowPayment(true)}
+          >
+            Continue
+          </button>
+          <button className="bg-yellow-400 px-8 py-1 border border-black outline-none rounded-sm">
+            Close
+          </button>
+        </footer>
       </div>
 
       {showPayment ? <Payment /> : null}
