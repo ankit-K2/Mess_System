@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import DisaptchSuccess from "./DisaptchSuccess";
+import { Link } from "react-router-dom";
 
 function TiffinService() {
   const [dispatchBtn, setDispatchBtn] = useState(true);
@@ -85,13 +86,13 @@ function TiffinService() {
         )}
 
         <div>
-          <button
+          <Link
             className=" absolute bottom-8 right-10  bg-yellow-400 px-9 py-1 border border-black rounded-lg  
                font-semibold"
-            onClick={() => setShowGenBtn(true)}
+            to="/"
           >
             Close
-          </button>
+          </Link>
         </div>
       </div>
     </div>

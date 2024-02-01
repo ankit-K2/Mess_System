@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function CustomerProfile() {
   const [searchButton, setSearchButton] = useState(true);
@@ -24,12 +25,13 @@ function CustomerProfile() {
           </button>
 
           <div>
-            <button
+            <Link
               className=" absolute bottom-8 right-10  bg-yellow-400 px-9 py-1 border border-black rounded-lg  
           font-semibold"
+              to="/"
             >
               Close
-            </button>
+            </Link>
           </div>
         </div>
       ) : (
@@ -39,45 +41,50 @@ function CustomerProfile() {
               placeholder="search student name"
               className="    w-[90%] bg-zinc-50 border border-black rounded-lg  my-5 p-1"
             />
-            <div className="">
-              <label>Name:</label>
-              <br />
-              <input className="bg-zinc-300 w-[40vw] border border-black outline-8" />
-              <br />
+            <div className="flex gap-5 ">
+              <div className=" ">
+                <label>Name:</label>
+                <br />
+                <input className="bg-zinc-300 w-[40vw] border border-black outline-8" />
+                <br />
 
-              <label>Mobile Number:</label>
-              <br />
-              <input className="bg-zinc-300 w-[40vw] border border-black outline-8" />
-              <br />
+                <label>Mobile Number:</label>
+                <br />
+                <input className="bg-zinc-300 w-[40vw] border border-black outline-8" />
+                <br />
 
-              <label>Permanent Address:</label>
-              <br />
-              <textarea className="w-[40vw] bg-zinc-300 border border-black outline-8"></textarea>
-              <br />
+                <label>Permanent Address:</label>
+                <br />
+                <textarea className="w-[40vw] bg-zinc-300 border border-black outline-8"></textarea>
+                <br />
 
-              <label>Temporary Address:</label>
-              <br />
-              <textarea className="w-[40vw]  bg-zinc-300 border border-black outline-8"></textarea>
-              <br />
+                <label>Temporary Address:</label>
+                <br />
+                <textarea className="w-[40vw]  bg-zinc-300 border border-black outline-8"></textarea>
+                <br />
 
-              <label>Aadhar Number:</label>
-              <br />
-              <input className="bg-zinc-300 w-[40vw] border border-black outline-8" />
-              <br />
+                <label>Aadhar Number:</label>
+                <br />
+                <input className="bg-zinc-300 w-[40vw] border border-black outline-8" />
+                <br />
+              </div>
+              <div className="pt-5">
+                plan category remaining balance
+                <p>
+                  plan <span>2000</span>
+                </p>
+              </div>
             </div>
-            <div>
-              {/* plan category remaining balance */}
-              {/* <p>plan <span>${}</span></p> */}
-            </div>
 
             <div className="">
-              <button
+              <Link
+                to="/"
                 className=" absolute bottom-8 right-10  bg-yellow-400 px-9 py-1 border border-black rounded-lg  
             font-semibold"
                 onClick={() => setSearchButton(true)}
               >
                 Close
-              </button>
+              </Link>
             </div>
           </form>
         </div>

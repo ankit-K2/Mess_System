@@ -16,14 +16,14 @@ const GenExcel = () => {
             <input type="checkbox" class="accent-yellow-400 h-5 w-5" />
             <label
               className="bg-yellow-300 px-9 py-0 border border-black rounded-md  
-               font-semibold"
+               font-semibold shadow-lg"
             >
               Dining
             </label>
             <input type="checkbox" class="accent-yellow-400 h-5 w-5" />
             <label
               className="bg-yellow-300 px-9 py-0 border border-black rounded-md  
-               font-semibold"
+               font-semibold shadow-lg"
             >
               Tiffin
             </label>
@@ -31,7 +31,7 @@ const GenExcel = () => {
           <div className=" absolute top-96 bottom-0">
             <button
               className=" absolute  bottom-0 bg-yellow-300 px-9 py-0 border border-black rounded-md  
-            font-semibold"
+            font-semibold shadow-lg"
             >
               Generate
             </button>

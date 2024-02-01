@@ -9,6 +9,7 @@ import CustomerData from "./components/CustomerData/CustomerData";
 import AddCustomer from "./components/AddCustomer/AddCustomer";
 import TiffinService from "./components/TiffinService/TiffinService";
 import CustomerProfile from "./components/CustomerData/CutomerProfile";
+import Payment from "./components/AddCustomer/Payment";
 
 function App() {
   const [Admin, setAdmin] = useState(false);
@@ -23,10 +24,20 @@ function App() {
           index
           element={Admin ? <ItemsContainer /> : null}
         ></Route>
-        <Route path="/customerData" element={<CustomerData />}></Route>
-        <Route path="/addCustomer" element={<AddCustomer />}></Route>
-        <Route path="/customerProfile" element={<CustomerProfile />}></Route>
+        <Route
+          path="/customerData"
+          element={Admin ? <CustomerData /> : <h1>Page Not Found</h1>}
+        ></Route>
+        <Route
+          path="/addCustomer"
+          element={Admin ? <AddCustomer /> : <h1>Page Not Found</h1>}
+        ></Route>
+        <Route
+          path="/customerProfile"
+          element={Admin ? <CustomerProfile /> : <h1>Page Not Found</h1>}
+        ></Route>
         <Route path="/tiffinService" element={<TiffinService />}></Route>
+        <Route path="/addCustomer/payment" element={<Payment />}></Route>
       </Routes>
     </BrowserRouter>
   );

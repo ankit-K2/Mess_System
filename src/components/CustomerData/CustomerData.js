@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 import GenExcel from "./GenExcel";
 import AddHelper from "./AddHelper";
 import MontlyPlan from "./MonthlyPlan";
@@ -39,7 +39,7 @@ function CustomerData() {
         Customer Database
       </header>
 
-      <div className="w-[95vw] h-[70vh]  mx-auto  bg-white ">
+      <div className=" relative w-[95vw] h-[70vh]  mx-auto  bg-white ">
         {/* buttons */}
         <div className="flex gap-1 ">
           <div>
@@ -85,12 +85,12 @@ function CustomerData() {
         </div>
 
         <footer className="mb-2">
-          <button
-            className="bg-yellow-400 px-8 border border-black outline-8 rounded-md
-          "
+          <Link
+            to="/"
+            className="absolute right-5 bottom-3 bg-yellow-400 px-8 py-1 border border-black outline-none rounded-sm shadow-lg "
           >
             Close
-          </button>
+          </Link>
         </footer>
       </div>
     </div>
