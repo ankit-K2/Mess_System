@@ -49,6 +49,7 @@ function AddCustomer() {
                 Tiffin
               </button>
             </div>
+
             <form>
               <div className="flex gap-10">
                 <div className="w-full">

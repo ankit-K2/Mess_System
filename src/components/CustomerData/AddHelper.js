@@ -36,7 +36,7 @@ const AddHelper = () => {
 
           <div className="w-[50%]  mx-28">
             <div className="px-4 mb-5">FingerPrint/ Biometric Details:</div>
-            <div className="bg-zinc-900 opacity-15 w-[90%] h-[18rem] border border-black"></div>
+            <div className="bg-zinc-50 opacity-5 w-[90%] h-[18rem] border border-black z-2"></div>
           </div>
         </div>
 

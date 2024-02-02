@@ -60,7 +60,7 @@ function TiffinService() {
           </div>
         ) : (
           <div>
-            <div className=" relative bg-yellow-400 w-[40vw] h-[40vh]">
+            <div className=" relative bg-yellow-400 w-[98%] h-[40vh] mr-4 ml-4">
               <div className="flex justify-between">
                 <div className=" text-3xl">Today's Dispatch</div>
                 <button
