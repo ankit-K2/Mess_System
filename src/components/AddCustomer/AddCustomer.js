@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Payment from "./Payment";
 import { Link } from "react-router-dom";
+import FingerPrint from "../../Assests/FingerPrintGif.gif";
 
 function AddCustomer() {
   const [diningStatus, setDiningStatus] = useState(true);
@@ -89,7 +90,16 @@ function AddCustomer() {
                     <div>
                       <label>FingerPrint/ Biometric Details:</label>
                       <br />
-                      <div className="bg-zinc-200 w-[90%] h-[30vh]"></div>
+                      <div
+                        className="relative bg-zinc-200  w-[90%] h-[15rem]
+                      flex justify-center items-center border border-black z-2"
+                      >
+                        <img
+                          className="object-fit h-[100%] w-[100%]"
+                          src={FingerPrint}
+                          alt="Fingerprint"
+                        />
+                      </div>
                     </div>
                   ) : null}
                 </div>

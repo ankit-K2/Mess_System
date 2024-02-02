@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import AttendanceSuccess from "./AttedanceSuccess";
+import FingerPrint from "../../Assests/FingerPrintGif.gif";
 
 const AddHelper = () => {
   const [showAttendanceSuccess, setShowAttendanceSuccess] = useState(false);
@@ -36,7 +37,16 @@ const AddHelper = () => {
 
           <div className="w-[50%]  mx-28">
             <div className="px-4 mb-5">FingerPrint/ Biometric Details:</div>
-            <div className="bg-zinc-50 opacity-5 w-[90%] h-[18rem] border border-black z-2"></div>
+            <div
+              className="relative  w-[90%] h-[10rem] 
+            flex justify-center items-center border border-black z-2"
+            >
+              <img
+                className="object-contain h-36 w-96 "
+                src={FingerPrint}
+                alt="Fingerprint"
+              />
+            </div>
           </div>
         </div>
 
@@ -49,6 +59,10 @@ const AddHelper = () => {
           </button>
         </div>
       </form>
+
+      {showAttendanceSuccess ? (
+        <AttendanceSuccess onClose={() => setShowAttendanceSuccess(false)} />
+      ) : null}
     </div>
   );
 };
