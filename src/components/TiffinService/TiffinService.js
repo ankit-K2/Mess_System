@@ -10,6 +10,7 @@ function TiffinService() {
 
   const [showSuccessDispatch, setShowSuccessDispatch] = useState(false);
 
+  const [showTiffinDispatch, setShowTiffinDispatch] = useState(false);
   const handleDispatch = () => {
     setDispatchBtn(true);
     setDailyTiffinBtn(false);
@@ -22,6 +23,13 @@ function TiffinService() {
 
   const handleDispatchList = () => {
     setShowSuccessDispatch(true);
+  };
+
+  const handleSuccess = () => {
+    setShowSuccessDispatch(true);
+    setTimeout(() => {
+      setShowSuccessDispatch(false);
+    }, 2000);
   };
   return (
     <div className="w-[95vw] h-[70vh] mx-auto mt-5 ">
@@ -47,7 +55,7 @@ function TiffinService() {
           </button>
         </div>
 
-        {showGenBtn ? (
+        {dispatchBtn && showGenBtn ? (
           <div>
             <button
               className="bg-yellow-400 px-8 border border-black outline-8  
@@ -58,7 +66,8 @@ function TiffinService() {
               Genrate Dispatch List
             </button>
           </div>
-        ) : (
+        ) : null}
+        {showGenBtn ? null : (
           <div>
             <div className=" relative bg-yellow-400 w-[98%] h-[40vh] mr-4 ml-4">
               <div className="flex justify-between">
@@ -75,7 +84,10 @@ function TiffinService() {
                 <button
                   className="absolute right-5 bottom-5 bg-yellow-400 px-8 border border-black outline-8  
             font-semibold"
-                  onClick={handleDispatchList}
+                  onClick={() => {
+                    handleDispatchList();
+                    handleSuccess();
+                  }}
                 >
                   Dispatch
                 </button>
